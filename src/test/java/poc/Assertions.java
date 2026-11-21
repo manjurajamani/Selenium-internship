@@ -1,4 +1,4 @@
-//package selenium-setup.Selenium-Setup
+package poc;//package selenium-setup.Selenium-Setup
 //package Selenium-internship.Selenium-Setup;
 
 import org.openqa.selenium.By;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Assertions1 {
+public class Assertions {
 
     WebDriver driver;
 
