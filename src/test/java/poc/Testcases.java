@@ -33,6 +33,8 @@ public class Testcases {
 
     }
 
+    // TC_LOGIN_01 – Valid login
+
     @Test
 
     public void login() {
@@ -43,6 +45,8 @@ public class Testcases {
         wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
         Assert.assertEquals(title.getText(), "Products", "Login did not reach Products page");
     }
+
+    // TC_LOGIN_03 – Invalid password
     @Test
     public void testInvalidPassword() {
         login("standard_user", "wrong_password");
