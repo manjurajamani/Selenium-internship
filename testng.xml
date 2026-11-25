@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Suite file — it decides which tests run -->
+<suite name="SauceDemo Test Suite">
+    <test name="Login Tests">
+        <groups>
+            <run>
+                <!-- Run both groups: smoke first, then regression -->
+                <!-- To run ONLY the smoke tests, delete the regression line below -->
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <!-- The test class to run -->
+            <class name="poc.Test_Framework_LoginTest"/>
+        </classes>
+    </test>
+</suite>
