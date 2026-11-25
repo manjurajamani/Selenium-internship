@@ -45,9 +45,13 @@ public class Test_Framework_BaseTest {
     // Takes a screenshot and saves it in the screenshots folder
     private void takeScreenshot(String testName) throws IOException {
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); // take the screenshot
+
         Path destination = Path.of("screenshots", testName + ".png"); // where to save it
+
         Files.createDirectories(destination.getParent()); // create the folder if it is missing
+
         Files.copy(screenshot.toPath(), destination, StandardCopyOption.REPLACE_EXISTING); // save the file
+
         System.out.println("Screenshot saved: " + destination.toAbsolutePath()); // print the file location
     }
 

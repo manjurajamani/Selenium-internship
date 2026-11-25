@@ -105,7 +105,9 @@ public class Test_Framework_LoginTest extends Test_Framework_BaseTest{
     }
     private void login(String username, String password) {
         driver.findElement(By.id("user-name")).sendKeys(username); // type the username
+
         driver.findElement(By.id("password")).sendKeys(password);  // type the password
+
         driver.findElement(By.id("login-button")).click();         // click the Login button
     }
 
