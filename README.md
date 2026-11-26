@@ -29,7 +29,7 @@ My Selenium Automation Testing internship tasks — one note per lesson, with th
 | `git-for-test-code/` | Lesson 11 – Git for test code (folder with its own README) |
 
 ## How to run
-1. Open the project in IntelliJ IDEA.
+1. Open the project in IntelliJ IDEA.@
 2. Right-click `pom.xml` → Maven → Reload Project (first time only).
 3. Right-click a test class (or `testng.xml`) and select Run.
 4. TestNG report: open `test-output/index.html` in a browser.
