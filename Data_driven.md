@@ -34,12 +34,12 @@ Apache POI is the library that reads Excel files in Java. Add it to the `<depend
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
-    <version>5.4.1</version>
+    <                                                                                                                         version>5.4.1</version>
 </dependency>
 
 Then reload Maven (Maven panel → Reload All Maven Projects) so the library downloads.
 
-Step 2 – Create the Excel file with 10 data sets
+****Step 2 – Create the Excel file with 10 data sets****
 Create the folder src/test/resources/Testdata and the file Logindata.xlsx inside it. Sheet name: Logindata. Row 1 is the header; rows 2–11 are the 10 data sets. The expected column uses keywords: success, locked, error:
 
 TestCase	Username	Password	Expected
@@ -55,7 +55,7 @@ TC09	standard_user	secret_sauce123	error
 TC10	problem_user	secret_sauce	success
 For the empty username/password rows, leave the cell blank (no space).
 
-Step 3 – Create the ExcelUtils class (utils package)
+****Step 3 – Create the ExcelUtils class (utils package)****
 ExcelUtils opens the Excel file with Apache POI and returns every data row as Object[][] — 4 columns: testCase, username, password, expected:
 
 java
@@ -83,7 +83,7 @@ public static Object[][] getTestData(String filePath, String sheetName) throws E
 }
 A blank cell returns "" (empty text) — that's how the empty username/password rows work.
 
-Step 4 – Write one test that uses the data provider (testcases package)
+****Step 4 – Write one test that uses the data provider (testcases package)****
 The @DataProvider calls ExcelUtils, and the test receives one Excel row at a time (testCase, username, password, expected) and runs 10 times. The expected keyword decides what to check:
 
 java
